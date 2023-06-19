@@ -15,4 +15,4 @@ function onButtonClickAdd() {
 function onButtonClickRemove() {
   counterValue -= 1;
   valueEl.textContent = counterValue;
-}
+} 
