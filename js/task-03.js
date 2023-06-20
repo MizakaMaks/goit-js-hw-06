@@ -13,14 +13,16 @@ const images = [
   },
 ];
 
-const galleryListEl = document.querySelector(".gallery");
-images.forEach((element) => {
-  const item = `
-  <li>
-    <img src="${element.url}" alt="${element.alt}" width="320" height="200">
-  </li>
+
+const gallery = document.querySelector(".gallery");
+
+const galleryItems = images.map((image) => {
+  return `
+    <li class="gallery-item">
+      <img src="${image.url}" alt="${image.alt}"" width="320" height="200"/>
+    </li>
   `;
-  galleryListEl.classList.add("animals-list");
-  galleryListEl.insertAdjacentHTML("beforeend", item);
 });
-console.log(galleryListEl);
+
+gallery.insertAdjacentHTML("beforeend", galleryItems.join(""));
+
